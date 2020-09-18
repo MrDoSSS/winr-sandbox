@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "importHelpers": true,
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "types": [
+      "webpack",
+      "webpack-env"
+    ],
+    "paths": {
+      "*": [
+        "node_modules/*"
+      ],
+      "@/*": [
+        "app/assets/javascript/*"
+      ],
+      "~/*": [
+        "app/*"
+      ]
+    },
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "include": [
+    "app/assets/javascript/**/*"
+  ],
+  "exclude": [
+    "**/*.spec.ts",
+    "node_modules",
+    "vendor",
+    "public"
+  ],
+  "compileOnSave": false
+}

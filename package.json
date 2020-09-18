@@ -1,0 +1,30 @@
+{
+  "name": "winr_sandbox",
+  "private": true,
+  "scripts": {
+    "lint:fix": "eslint --ext .ts,.js app/javascript --fix",
+    "rails:dev": "./bin/rails s -p 3000 -b 0.0.0.0",
+    "webpack:dev": "./bin/webpack-dev-server",
+    "dev": "concurrently -k -p \"[{name}]\" -n \"Rails,Webpack\" -c \"red.bold,green.bold\" \"yarn rails:dev\" \"yarn webpack:dev\""
+  },
+  "dependencies": {
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "inputmask-core": "^2.2.0",
+    "turbolinks": "^5.2.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "@rails/webpacker": "4.3.0",
+    "@types/actioncable": "^5.2.3",
+    "@types/activestorage": "^5.2.2",
+    "@types/turbolinks": "^5.2.0",
+    "@types/webpack": "^4.41.21",
+    "@types/webpack-env": "^1.15.2",
+    "concurrently": "^5.3.0",
+    "ts-loader": "^8.0.3",
+    "typescript": "^4.0.2",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
