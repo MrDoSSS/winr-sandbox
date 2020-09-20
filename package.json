@@ -9,16 +9,16 @@
   },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
-    "@rails/activestorage": "^6.0.0",
-    "@rails/ujs": "^6.0.0",
+    "cable_ready": "^4.4.0-pre0",
     "inputmask-core": "^2.2.0",
-    "turbolinks": "^5.2.0"
+    "tailwindcss": "^1.8.10",
+    "turbolinks": "^5.2.0",
+    "winr-components": "MrDoSSS/winr-design"
   },
   "version": "0.1.0",
   "devDependencies": {
     "@rails/webpacker": "4.3.0",
     "@types/actioncable": "^5.2.3",
-    "@types/activestorage": "^5.2.2",
     "@types/turbolinks": "^5.2.0",
     "@types/webpack": "^4.41.21",
     "@types/webpack-env": "^1.15.2",

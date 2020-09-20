@@ -1,0 +1,10 @@
+= content_for :page_packs do
+  = javascript_pack_tag 'products/index', 'data-turbolinks-track': 'reload'
+
+div class="p-24"
+  winr-input[
+    label="label"
+    id="user_phone"
+    validable="true"
+    validator={name: 'ActiveRecord', class_name: User.name, field: 'phone'}.to_json
+  ]

@@ -3,15 +3,14 @@ declare module '@rails/actioncable' {
   export = actioncable
 }
 
-declare module '@rails/activestorage' {
-  import activestorage from 'activestorage'
-  export = activestorage
-}
+declare module 'cable_ready' {
+  namespace CableReady {
+    type operations = {
+      [key: string]: object
+    }
 
-declare module '@rails/ujs' {
-  namespace ujs {
-    export function start (): void
+    export function perform (operations: operations): void
   }
 
-  export = ujs
+  export = CableReady
 }

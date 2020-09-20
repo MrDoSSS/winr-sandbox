@@ -10,6 +10,10 @@ html
     = csp_meta_tag
     = stylesheet_pack_tag 'assets', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'components', 'data-turbolinks-track': 'reload', defer: true
+    
+    = yield :page_packs if content_for?(:page_packs)
     
   body
     = yield
+
