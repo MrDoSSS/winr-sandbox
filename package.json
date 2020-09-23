@@ -11,7 +11,6 @@
     "@rails/actioncable": "^6.0.0",
     "cable_ready": "^4.4.0-pre0",
     "inputmask-core": "^2.2.0",
-    "tailwindcss": "^1.8.10",
     "turbolinks": "^5.2.0",
     "winr-components": "MrDoSSS/winr-design"
   },
