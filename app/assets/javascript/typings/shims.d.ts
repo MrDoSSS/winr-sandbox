@@ -5,11 +5,19 @@ declare module '@rails/actioncable' {
 
 declare module 'cable_ready' {
   namespace CableReady {
-    type operations = {
-      [key: string]: object
+    type Operations = {
+      name: {
+        selector: string
+        element: string
+      }[]
     }
 
-    export function perform (operations: operations): void
+    export type Data = {
+      operations: Operations
+      cableReady: boolean
+    }
+
+    export function perform (operations: Operations): void
   }
 
   export = CableReady
