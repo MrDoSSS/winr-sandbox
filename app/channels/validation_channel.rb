@@ -4,7 +4,7 @@ class ValidationChannel < ApplicationCable::Channel
   include CableReady::Broadcaster
 
   def subscribed
-    stream_from 'ValidationChannel'
+    stream_from(stream_name)
   end
 
   def receive(data)
@@ -25,15 +25,11 @@ class ValidationChannel < ApplicationCable::Channel
       result += obj.errors[field] || [] unless obj.valid?
     end
 
-    cable_ready['ValidationChannel'].dispatch_event(
+    cable_ready[stream_name].dispatch_event(
       name: 'validateResult',
       detail: result,
       selector: data[:target]
     )
     cable_ready.broadcast
-  end
-
-  def unsubscribed
-    # Any cleanup needed when channel is unsubscribed
   end
 end
