@@ -34,7 +34,7 @@ module WinrForm
 
       options[:native][:name] ||= "#{@object_name}[#{method}]"
 
-      options.except(:label, :value, :errors,
+      options.except(:label, :value, :errors, :id,
                      :'no-validate', :validators, :native).each do |k, v|
         options[:native][k] = v
       end

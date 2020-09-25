@@ -22,3 +22,14 @@ declare module 'cable_ready' {
 
   export = CableReady
 }
+
+declare module 'stimulus_reflex' {
+  import { Controller, Application, ControllerConstructor } from 'stimulus'
+
+  namespace StimulusReflex {
+    export function register (controller: Controller): void
+    export function initialize (app: Application, config: { consumer?: ActionCable.Cable, controller: ControllerConstructor, debug?: boolean }): void
+  }
+
+  export = StimulusReflex
+}
