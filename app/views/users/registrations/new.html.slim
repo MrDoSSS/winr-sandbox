@@ -1,8 +1,10 @@
-h2 Sign up
-= winr_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = f.email_field :email, autofocus: true, autocomplete: "email"
-  = f.password_field :password, autocomplete: "new-password"
-  = f.password_field :password_confirmation, autocomplete: "new-password", 'no-validate': true
-  .actions
-    = f.submit "Sign up"
-= render "users/shared/links"
+div data-controller="users--registrations"
+  h2 Sign up
+  = winr_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {remote: true}) do |f|
+    = f.email_field :email, autofocus: true, autocomplete: "email", required: true
+    = f.text_field :phone, autocomplete: "phone", required: true
+    = f.password_field :password, autocomplete: "new-password"
+    = f.password_field :password_confirmation, autocomplete: "new-password", 'no-validate': true
+    .actions
+      winr-btn type="submit" Sign up
+  = render "users/shared/links"

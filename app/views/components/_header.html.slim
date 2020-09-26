@@ -1,0 +1,5 @@
+header
+  - if user_signed_in?
+    a href=destroy_user_session_path data-method="delete" data-remote="true" Выйти
+  - else
+    a href=new_user_session_path Войти

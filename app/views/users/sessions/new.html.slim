@@ -1,11 +1,12 @@
-h2 Log asdasd
-= winr_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  = f.email_field :email, autofocus: true, autocomplete: 'email', 'no-validate': true
-  = f.password_field :password, autocomplete: 'current-password', 'no-validate': true
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "users/shared/links"
+div data-controller="users--sessions"
+  h2 Log asdasd
+  = winr_form_for(resource, as: resource_name, url: session_path(resource_name), data: {remote: true}) do |f|
+    = f.email_field :email, autofocus: true, autocomplete: 'email', 'no-validate': true
+    = f.password_field :password, autocomplete: 'current-password', 'no-validate': true
+    - if devise_mapping.rememberable?
+      .field
+        = f.check_box :remember_me
+        = f.label :remember_me
+    .actions
+      = f.submit "Log in"
+  = render "users/shared/links"

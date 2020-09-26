@@ -9,10 +9,10 @@
   },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
+    "@rails/ujs": "^6.0.3-3",
     "cable_ready": "^4.4.0-pre0",
     "inputmask-core": "^2.2.0",
     "stimulus": "^1.1.1",
-    "stimulus_reflex": "^3.3.0",
     "turbolinks": "^5.2.0",
     "winr-components": "MrDoSSS/winr-design"
   },
