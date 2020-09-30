@@ -23,7 +23,7 @@
         "node_modules/*"
       ],
       "@/*": [
-        "app/assets/javascript/*"
+        "app/assets/javascripts/*"
       ],
       "~/*": [
         "app/*"
@@ -33,7 +33,7 @@
     "target": "es5"
   },
   "include": [
-    "app/assets/javascript/**/*"
+    "app/assets/javascripts/**/*"
   ],
   "exclude": [
     "**/*.spec.ts",

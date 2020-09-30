@@ -7,7 +7,7 @@ environment.loaders.prepend('typescript', typescript)
 environment.config.merge({
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, '..', '..', 'app/assets/javascript'),
+      '@': path.resolve(__dirname, '..', '..', 'app/assets/javascripts'),
       '~': path.resolve(__dirname, '..', '..', 'app'),
     }
   }

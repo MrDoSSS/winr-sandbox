@@ -6,5 +6,5 @@ div data-controller="users--registrations"
     = f.password_field :password, autocomplete: "new-password"
     = f.password_field :password_confirmation, autocomplete: "new-password", 'no-validate': true
     .actions
-      winr-btn type="submit" Sign up
+      = f.submit 'Sign up'
   = render "users/shared/links"

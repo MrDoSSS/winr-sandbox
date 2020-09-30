@@ -2,6 +2,11 @@
 
 module WinrForm
   class Builder < ActionView::Helpers::FormBuilder
+    def submit(label, options = {})
+      options[:type] = 'submit'
+      @template.content_tag 'winr-btn', label, options
+    end
+
     def email_field(method, options = {}, &block)
       options[:type] = 'email'
       text_field(method, options, &block)
